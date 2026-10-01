@@ -1,0 +1,7 @@
+build/
+out/
+install/
+.cache/
+*.user
+*.log
+*.tmp
