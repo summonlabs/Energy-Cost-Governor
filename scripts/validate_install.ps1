@@ -29,7 +29,8 @@
 
 .PARAMETER MsvcEnv
     The helper that puts cl.exe and the Windows SDK on PATH. Dot-sourced by this
-    script so the caller does not have to prepare a shell first.
+    script so the caller does not have to prepare a shell first. Defaults to
+    $env:USERPROFILE\.ecg-scratch\msvc-env.ps1 for the account running the script.
 
 .PARAMETER Cleanup
     Delete WorkDir when the validation passes. Off by default so the artefacts
@@ -45,7 +46,7 @@ param(
   [string] $WorkDir,
   [string] $SourceDir,
   [string] $Generator = 'Ninja',
-  [string] $MsvcEnv = 'C:\Users\pauln\.ecg-scratch\msvc-env.ps1',
+  [string] $MsvcEnv = (Join-Path $env:USERPROFILE '.ecg-scratch\msvc-env.ps1'),
   [switch] $Cleanup
 )
 
