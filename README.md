@@ -1,7 +1,7 @@
 # Energy-Cost-Governor
 
 Energy-Cost-Governor (ECG) is a portable C++20 runtime that answers one narrow,
-high-consequence question inside a Summon Software Labs Data Center Control Plane:
+high-consequence question:
 **given current price, demand-charge, reserve, efficiency, service-class, risk,
 capacity, and incident evidence, which energy-cost-sensitive operating decisions
 are allowed, refused, deferred, or indeterminate, and why?**
